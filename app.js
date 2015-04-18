@@ -47,6 +47,7 @@ User.create(newUser).then(function() {
     console.log("删除所有角色为" + user.role + "的user")
     return User.remove({role: user.role}).exec()
 }).then(function(user) {
+    console.log("<========================= 我是分隔符 ==========================>")
     return User.find().exec();  
 }).then(function(users) {
     console.log("删除后有" + users.length + "个用户");
